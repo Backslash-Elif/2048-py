@@ -1,0 +1,81 @@
+def installModules(file): #gets called only if a module cannot locate a required module and installs the modules required for the game
+    import subprocess, turtle
+    print("install.py: subprocess, turtle have peen imported.")
+    t=turtle
+    tempX = t.xcor()
+    tempY = t.ycor()
+    t.pu()
+    t.goto(0, -250)
+    t.color("black")
+    t.write("pip is installing modules.", False, "center", font=("Consolas", 15, "normal"))
+    t.color(1, 0, 0)
+    t.goto(tempX, tempY)
+    t.pd()
+    if file == "main":
+        try:
+            print("install.py: Installing pip upgrade.")
+            subprocess.run("py -m pip install pip --upgrade", shell=True)
+            print("install.py: NOTE: pip upgrade was successfully installed.")
+            t.forward(10)
+            print("install.py: Installing pydub.")
+            subprocess.run("py -m pip install pydub", shell=True)
+            print("install.py: NOTE: pydub was successfully installed.")
+            t.forward(10)
+            print("install.py: Installing pyaudio.")
+            subprocess.run("py -m pip install pyaudio", shell=True)
+            print("install.py: NOTE: pyaudio was successfully installed.")
+            t.forward(10)
+        except:
+            print("install.py: ERR: Installation error!")
+    if file == "sound":
+        try:
+            print("install.py: Installing soundfile.")
+            subprocess.run("py -m pip install soundfile", shell=True)
+            print("install.py: NOTE: soundfile was successfully installed.")
+            t.forward(40)
+            print("install.py: Installing sounddevice.")
+            subprocess.run("py -m pip install sounddevice", shell=True)
+            print("install.py: NOTE: sounddevice was successfully installed.")
+            t.forward(40)
+            print("install.py: Installing mutagen.")
+            subprocess.run("py -m pip install mutagen", shell=True)
+            print("install.py: NOTE: mutagen was successfully installed.")
+            t.forward(40)
+            print("install.py: Installing pydub.")
+            subprocess.run("py -m pip install pydub", shell=True)
+            print("install.py: NOTE: pydub was successfully installed.")
+            t.forward(40)
+            print("install.py: Installing numpy.")
+            subprocess.run("py -m pip install numpy", shell=True)
+            print("install.py: NOTE: numpy was successfully installed.")
+            t.forward(40)
+        except:
+            print("install.py: ERR: Installation error!")
+    if file == "misc":
+        try:
+            print("install.py: Installing pynput.")
+            subprocess.run("py -m pip install pynput", shell=True)
+            print("install.py: NOTE: pynput was successfully installed.")
+            t.forward(10)
+            print("install.py: Installing pygame.")
+            subprocess.run("py -m pip install pygame", shell=True)
+            print("install.py: NOTE: pygame was successfully installed.")
+            t.forward(10)
+        except:
+            print("install.py: ERR: Installation error!")
+    if file == "draw":
+        try:
+            print("install.py: Installing pip upgrade.")
+            subprocess.run("py -m pip install pip --upgrade", shell=True)
+            print("install.py: NOTE: pip upgrade was successfully installed.")
+            t.forward(10)
+            print("install.py: Installing pydub.")
+            subprocess.run("py -m pip install pydub", shell=True)
+            print("install.py: NOTE: pydub was successfully installed.")
+            t.forward(10)
+            print("install.py: Installing pyaudio.")
+            subprocess.run("py -m pip install pyaudio", shell=True)
+            print("install.py: NOTE: pyaudio was successfully installed.")
+            t.forward(10)
+        except:
+            print("install.py: ERR: Installation error!")
